@@ -21,8 +21,15 @@ using namespace cv::xfeatures2d;
 class SIFT_pair
 {
 public:
+	Mat E;
+	//Mat F;
+	vector<Point2f> pair_loc_1;
+	vector<Point2f> pair_loc_2;
 	void Initialize();
 	void match2viewSIFT(frame frames, int frame_1, int frame_2, bool visualize);
+	void estimateE(double focal_length);
+	//void estimateF();
+
 	
 };
 

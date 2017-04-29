@@ -8,7 +8,9 @@ int main()
 	frame frames;
 	frames.f2k();
 	SIFT_pair pairs;
+
 	pairs.match2viewSIFT(frames,0,1,visualize);
+	pairs.estimateE(frames.focal_length);
 	namedWindow("Display Image", WINDOW_AUTOSIZE );
     imshow("Display Image", frames.images[0]);
     waitKey(0);
