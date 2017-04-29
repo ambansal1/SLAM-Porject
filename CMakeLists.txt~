@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( DisplayImage )
+find_package( OpenCV REQUIRED )
+set(INCLUDE_DIR /home/yuzhang/Desktop/16833/Project/Test2/include)
+include_directories( ${INCLUDE_DIR})
+add_executable( Test2 main.cpp frame.cpp SIFT_pair.cpp )
+target_link_libraries( Test2 ${OpenCV_LIBS} )
